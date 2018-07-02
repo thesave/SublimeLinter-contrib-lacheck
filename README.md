@@ -1,15 +1,20 @@
 SublimeLinter-contrib-lacheck
 ================================
 
-It will be used with files that have the “__latex__” syntax.
+This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [__linter__](__linter_homepage__). It will be used with files that have the “__latex__” syntax.
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://www.sublimelinter.com/en/latest/installation.html).
+SublimeLinter must be installed in order to use this plugin. 
+
+Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
+
+Before installing this plugin, you must ensure that `__linter__` is installed on your system.
+
+In order for `__linter__` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
 
 ### Linter installation
 Before using this plugin, you must ensure that `lacheck` is installed on your system.
 
 ### Plugin installation
-Go to `Packages` under your Sublime Text installation folder with your terminal of choice and type
 
-`git clone https://github.com/thesave/SublimeLinter-contrib-lacheck`
+Please use [Package Control](https://packagecontrol.io) to install the `SublimeLinter-contrib-lacheck` plugin.
