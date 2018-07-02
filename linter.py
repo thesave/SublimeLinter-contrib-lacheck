@@ -10,7 +10,7 @@
 
 from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
 
-class __class__(Linter):
+class Lacheck(Linter):
 
     syntax = ('latex', 'latexing', 
         'latex (knitr)', 'knitr-rnw', 
