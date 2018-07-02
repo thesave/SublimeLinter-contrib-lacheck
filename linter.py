@@ -8,22 +8,16 @@
 # License: MIT
 #
 
-from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
+from SublimeLinter.lint import Linter, util  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
 
-class __class__(Linter):
-
-    syntax = ('latex', 'latexing', 
-        'latex (knitr)', 'knitr-rnw', 
-        'latex beamer', 'latexing beamer')
-    cmd = 'lacheck @'
+class Lacheck(Linter):
+    cmd = 'lacheck ${file}'
     error_stream = util.STREAM_BOTH
-    regex = r'.+, line (?P<line>\d+): (?:(possible unwanted space at "{")|(?P<message>.+))'
-    # multiline = False
+    regex = ( 
+        r'.+, line (?P<line>\d+): (?:(possible unwanted space at "{")|(?P<message>.+))' 
+    )
+    defaults = {
+         'selector': 'text.tex.latex - meta.block.parameters.knitr - source.r.embedded.knitr',
+    }
+    multiline = True
     line_col_base = (1, 1)
-    tempfile_suffix = None
-    selectors = {}
-    word_re = None
-    defaults = {}
-    inline_settings = None
-    inline_overrides = None
-    comment_re = None
