@@ -2,20 +2,15 @@
 # linter.py
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
-# Written by thesave
-# Copyright (c) 2015 thesave
+# Written by Saverio Giallorenzo
+# Copyright (c) 2018 Saverio Giallorenzo
 #
 # License: MIT
 #
 
-"""This module exports the Lacheck plugin class."""
+from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
 
-from SublimeLinter.lint import Linter, util
-
-
-class Lacheck(Linter):
-
-    """Provides an interface to lacheck."""
+class __class__(Linter):
 
     syntax = ('latex', 'latexing', 
         'latex (knitr)', 'knitr-rnw', 
@@ -32,4 +27,3 @@ class Lacheck(Linter):
     inline_settings = None
     inline_overrides = None
     comment_re = None
-
